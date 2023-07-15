@@ -1,8 +1,10 @@
-EmbeddingMethod/code/process_AQP_list/output/tpch_22.json
-EmbeddingMethod/code/process_AQP_list/output/merge.json
-EmbeddingMethod/code/GenerateTreeVector/dictfile/new/AQPNodeVector.txt
-EmbeddingMethod/code/Preprocessing/output/nodeindex-weightmetric.emb
-EmbeddingMethod/code/process_AQP_list/input/tpch_22.txt
-EmbeddingMethod/code/GenerateTreeNodeSet/input/tpch_22.json
-EmbeddingMethod/code/Preprocessing/input/merge.json
+EmbeddingMethod/src/process_AQP_list/output/tpch_22.json
+EmbeddingMethod/src/process_AQP_list/output/merge.json
+EmbeddingMethod/src/GenerateTreeVector/dictfile/new/AQPNodeVector.txt
+EmbeddingMethod/src/GenerateTreeVector/dictfile/new/AQPNodeFreDict.txt
+EmbeddingMethod/src/GenerateTreeVector/dictfile/new/AQPNodeIndex.txt
+EmbeddingMethod/src/process_AQP_list/input/tpch_22.txt
+EmbeddingMethod/src/GenerateTreeNodeSet/input/tpch_22.json
+EmbeddingMethod/src/Preprocessing/input/merge.json
+*.emb
 .vscode/

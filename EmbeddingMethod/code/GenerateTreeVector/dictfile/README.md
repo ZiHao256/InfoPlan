@@ -1,5 +1,0 @@
-- dictfile目录：
-  - 通过preprocessing步骤得到的skip-gram模型训练数据
-    - `AQPNodeIndex.txt`：节点索引列
-    - `AQPNodeVector.txt`：对应节点索引的AQP Vector
-    - `AQPNodeFreDict.txt`: 节点出现的频率

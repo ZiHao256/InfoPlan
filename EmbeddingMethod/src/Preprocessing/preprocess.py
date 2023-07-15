@@ -3,7 +3,7 @@ import os
 import sys
 import numpy as np
 import networkx as nx
-from Preprocessing.word2vec import node2vec
+from word2vec import node2vec
 from gensim.models import Word2Vec
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from GenerateTreeNodeSet.get_DFS_node_list import AQPs2Tree
