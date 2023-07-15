@@ -459,22 +459,22 @@ struct TreeEdit
 
 
 // These three functions are used in the ARENA system
-void ARENA_TIPS();  // TIPS algorithm
+void INFOPLAN_TIPS();  // TIPS algorithm
 void FindKRandom();  // Random
 void FindKCost();  // Cost
 
 // The following functions are used for the experiments in Section 7.2
-void ARENAExp1();  // Exp1 in Section 7.2, TIPS algorithm
-void ARENAExp1Embedding();	// Exp1 in Section 7.2, Embedding
-void ARENAExp1Random();  // Exp1 in Section 7.2, Random
-void ARENAExp1Cost();  // Exp1 in Section 7.2, Cost
+void INFOPLAN_Exp1();  // Exp1 in Section 6.2, TIPS algorithm
+void INFOPLAN_Exp1Embedding();	// Exp1 in Section 6.2, Embedding
+void INFOPLAN_Exp1Random();  // Exp1 in Section 6.2, Random
+void INFOPLAN_Exp1Cost();  // Exp1 in Section 6.2, Cost
 
-void ARENAExp2Suffix();  // Exp2 in Section 7.2, suffix Tree
-void ARENAExp2Hash();  // Exp2 in Section 7.2, Hash Table
+void INFOPLAN_Exp2Suffix();  // Exp2 in Section 6.2, suffix Tree
+void INFOPLAN_Exp2Hash();  // Exp2 in Section 6.2, Hash Table
 
-void ARENAGFPExp();  // Exp 4 in Section 7.2
+void INFOPLAN_GFPExp();  // Exp 4 in Section 6.2
 
-void ARENALAPSExp();  // Exp 5 in Section 7.2
+void INFOPLAN_LAPSExp();  // Exp 5 in Section 6.2
 
 // assistant function
 void readConfig(char mode='B');
@@ -1332,9 +1332,9 @@ void ARENAGetIndexInfo(CExpression * exp, IOstream &os){
 }
 
 // GFP strategy
-void ARENAGFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep, std::unordered_map<int, CCost>* id2Cost);
+void INFOPLAN_GFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep, std::unordered_map<int, CCost>* id2Cost);
 // LAPS strategy
-void ARENALaps(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep);
+void INFOPLAN_Laps(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep);
 
 int getIndex(char c)
 {
@@ -2561,7 +2561,7 @@ void I_TIPS(std::vector<T>& plans, std::vector<int>& res, std::priority_queue<Mi
 }
 
 // calculate the plan interestringness of a plan set
-double ARENACalculateDist(std::vector<int> & res)
+double INFOPLAN_CalculateDist(std::vector<int> & res)
 {
 	plan_trees_hash.reserve(res.size());
 	for(std::size_t i=0;i<plan_buffer_list.size();i++)
@@ -2627,7 +2627,7 @@ double ARENACalculateDist(std::vector<int> & res)
 	return min_dist;
 }
 
-double ARENACalculateDist(std::unordered_set<int> & res)
+double INFOPLAN_CalculateDist(std::unordered_set<int> & res)
 {
 	std::vector<int> new_res;
 	for(auto n: res)
@@ -2635,7 +2635,7 @@ double ARENACalculateDist(std::unordered_set<int> & res)
 		new_res.push_back(n);
 	}
 	sort(new_res.begin(), new_res.end());
-	return ARENACalculateDist(new_res);
+	return INFOPLAN_CalculateDist(new_res);
 }
 
 // random algorithm in Exp1
@@ -2660,7 +2660,7 @@ double FindKRandomExp(std::vector<T>& plans, std::vector<int>& res, std::size_t 
 			}
 		}
 
-		double temp_dist = ARENACalculateDist(res_set);
+		double temp_dist = INFOPLAN_CalculateDist(res_set);
 		if(temp_dist > distance)
 		{
 			res.clear();
@@ -4816,7 +4816,7 @@ CEngine::SamplePlans()
 	std::vector<std::string>& groupTree = m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTree;  // record the information of Group Frost
 	fout_plan << "the number of GroupTree is: " << groupTree.size() << std::endl;
 	std::unordered_map<std::string, std::vector<int>>& groupTreePlus = m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus;
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 	std::unordered_map<int, CCost> & id2Cost = m_pmemo->Pmemotmap()->ProotNode()->ARENA_id2Cost;
 	fout_plan << std::showpoint;
 #endif
@@ -4833,10 +4833,10 @@ CEngine::SamplePlans()
 		if(gIsGTFilter)
 		{
 			fout_plan << "use GFP\n";
-#ifdef ARENA_COSTFT
-			ARENAGFPFilter(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree, &id2Cost);
+#ifdef INFOPLAN_COSTFT
+			INFOPLAN_GFPFilter(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree, &id2Cost);
 #else
-			ARENAGFPFilter(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree, nullptr);
+			INFOPLAN_GFPFilter(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree, nullptr);
 #endif
 			fout_plan << "the plans need to be filtered out:  ";
 			for(auto tempIter=filteredId.begin(); tempIter != filteredId.end(); tempIter++)
@@ -4850,7 +4850,7 @@ CEngine::SamplePlans()
 		{
 			fout_plan << "use LAPS\n";
 			ullTargetSamples = gSampleNumber;
-			ARENALaps(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree);
+			INFOPLAN_Laps(m_pmemo->Pmemotmap()->ProotNode()->ARENA_groupTreePlus, filteredId, tempTree);
 
 			for(auto tempIter=filteredId.begin(); tempIter != filteredId.end(); tempIter++)
 			{
@@ -4978,34 +4978,31 @@ CEngine::SamplePlans()
 	if (gResFile.size() > 0 && gResFile.compare("###") != 0)
 	{
 		fout_time << "normal ARENA system\n";
-		ARENA_TIPS();
+		INFOPLAN_TIPS();
 	}
 	else
 	{
 		fout_time << "experiment\n";
 		// adjust the function that will be executed based on the current experiment
 
-		/* to get json*/
-		// ARENA_TIPS();
-
 		/* Exp1 */
-		// ARENAExp1();
-		// ARENAExp1Embedding();
-		// ARENAExp1Random();
-		// ARENAExp1Cost();
+		// INFOPLAN_Exp1();
+		// INFOPLAN_Exp1Embedding();
+		// INFOPLAN_Exp1Random();
+		// INFOPLAN_Exp1Cost();
 
 		/* Exp2 */
-		// ARENAExp2Suffix();
-		// ARENAExp2Hash();
+		// INFOPLAN_Exp2Suffix();
+		// INFOPLAN_Exp2Hash();
 
 		/* Exp3 */
-		// ARENA_TIPS();
+		// INFOPLAN_TIPS();
 
 		/* Exp4 */
-		// ARENAGFPExp();
+		// INFOPLAN_GFPExp();
 
 		/* Exp5 */
-		// ARENALAPSExp();
+		// INFOPLAN_LAPSExp();
 	}
 
 	time_end = std::chrono::steady_clock::now();
@@ -5610,7 +5607,7 @@ void ARENA_result(std::vector<int> & res)
  * In fact, we can just generate the Group Tree with the same structure as QEP and we
  * will optimize this part later.
  ************************************************************/ 
-void ARENALaps(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep)
+void INFOPLAN_Laps(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep)
 {
 	std::size_t target_len = qep.str_serialize.size();
 	// traverse all Group Trees
@@ -5632,7 +5629,7 @@ void ARENALaps(std::unordered_map<std::string, std::vector<int>> & groupTreePlus
 /************************************************************
  * Use GFP or GFP&Cost strategy to filter uninformative plans
  ************************************************************/ 
-void ARENAGFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep, std::unordered_map<int, CCost>* id2Cost)
+void INFOPLAN_GFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTreePlus, std::unordered_set<int> & record, PlanTreeHash<CExpression>& qep, std::unordered_map<int, CCost>* id2Cost)
 {
 	std::vector<gtTree> gtList;  // class gtTree is used to serialize the Group Tree
 	std::ofstream fout_dist("/tmp/gtDist");  // output the Group Tree information, used for Exp4
@@ -5641,7 +5638,7 @@ void ARENAGFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTre
 		id2Cost = nullptr;
 	}
 
-#ifdef ARENA_COSTFT  // by default, the GFP strategy is used, if this macro is defined, the GFP&Cost strategy is enabled
+#ifdef INFOPLAN_COSTFT  // by default, the GFP strategy is used, if this macro is defined, the GFP&Cost strategy is enabled
 	double tMinCost = qep.get_cost();
 	double tMaxCost = 0.0;  // get the max cost, used to get the cost difference
 	for(auto iter = id2Cost->begin();iter != id2Cost->end(); iter++)
@@ -5672,7 +5669,7 @@ void ARENAGFPFilter(std::unordered_map<std::string, std::vector<int>> & groupTre
 		{
 			for(int tempId: t.inIter->second)  // record the plan ids corresponding to this Group Tree and they are filtered out
 			{
-#ifdef ARENA_COSTFT  // if the GFP&Cost strategy is enabled, it is also necessary to determine whether the cost difference is greater than the threshold
+#ifdef INFOPLAN_COSTFT  // if the GFP&Cost strategy is enabled, it is also necessary to determine whether the cost difference is greater than the threshold
 				temp = id2Cost->at(tempId).Get();
 				if((temp-tMinCost)/tMaxCost >= gGFPFilterThreshold)
 				{
@@ -5714,7 +5711,7 @@ std::string getLogFileName()
  * the wrapper function of TIPS algorithm
  * Invoke B-TIPS or I-TIPS algorithms as needed
  *************************************************************/
-void ARENA_TIPS()
+void INFOPLAN_TIPS()
 {
 	if(gMode == 'B')  // B-TIPS mode
 	{
@@ -6003,7 +6000,7 @@ void FindKCost()
 }
 
 // test the effectiveness and efficiency of TIPS
-void ARENAExp1()
+void INFOPLAN_Exp1()
 {
 	plan_trees_hash.reserve(plan_buffer.size());
 
@@ -6074,7 +6071,7 @@ void ARENAExp1()
 }
 
 // test the effectiveness and efficiency of embedding
-void ARENAExp1Embedding(){
+void INFOPLAN_Exp1Embedding(){
 	// record the selected AQPs ids from embedding
 	std::vector<int> selected_embedding_AQPs;
 
@@ -6197,7 +6194,7 @@ void ARENAExp1Embedding(){
 
 
 // test the effectiveness and efficiency of Random
-void ARENAExp1Random()
+void INFOPLAN_Exp1Random()
 {
 	std::string logFile = getLogFileName();
 	std::ofstream fout_time(logFile);
@@ -6224,7 +6221,7 @@ void ARENAExp1Random()
 }
 
 // test the effectiveness and efficiency of Cost
-void ARENAExp1Cost()
+void INFOPLAN_Exp1Cost()
 {
 	std::string logFile = getLogFileName();
 	std::ofstream fout_time(logFile);
@@ -6237,7 +6234,7 @@ void ARENAExp1Cost()
 			auto start = std::chrono::steady_clock::now();
 			FindKCostExp(plan_buffer_list, res, tempPlanNum);
 			fout_time << std::setiosflags(std::ios::fixed)<<std::setprecision(3);
-			fout_time << "*plan interestingness: " << ARENACalculateDist(res) << '\n';
+			fout_time << "*plan interestingness: " << INFOPLAN_CalculateDist(res) << '\n';
 			fout_time << "*total time(ms): " << (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - start)).count() << std::endl;
 
 			plan_trees_hash.clear();
@@ -6249,7 +6246,7 @@ void ARENAExp1Cost()
 }
 
 // test the time-consuming of suffix tree in different stages
-void ARENAExp2Suffix()
+void INFOPLAN_Exp2Suffix()
 {
 	std::vector<PlanTreeExp<CExpression>> plan_trees_exp;
 	plan_trees_exp.reserve(plan_buffer.size());
@@ -6311,7 +6308,7 @@ void ARENAExp2Suffix()
 }
 
 // test the time-consuming of hash table in different stages
-void ARENAExp2Hash()
+void INFOPLAN_Exp2Hash()
 {
 	plan_trees_hash.reserve(plan_buffer.size());
 
@@ -6373,7 +6370,7 @@ void ARENAExp2Hash()
  * This function implements the B-TIPS algorithm, but does
  * not send data, and is used for the experiment of the GFP strategy
  *************************************************************/ 
-void ARENAGFPExp()
+void INFOPLAN_GFPExp()
 {
 	plan_trees_hash.reserve(plan_buffer.size());
 	std::string logFile = getLogFileName();
@@ -6436,7 +6433,7 @@ void ARENAGFPExp()
  * This function implements the B-TIPS algorithm and is used for
  * validate the LAPS strategy
  *************************************************************/ 
-void ARENALAPSExp()
+void INFOPLAN_LAPSExp()
 {
 	plan_trees_hash.reserve(plan_buffer.size());
 	std::string logFile = getLogFileName();

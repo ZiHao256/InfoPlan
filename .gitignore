@@ -5,3 +5,4 @@ EmbeddingMethod/code/Preprocessing/output/nodeindex-weightmetric.emb
 EmbeddingMethod/code/process_AQP_list/input/tpch_22.txt
 EmbeddingMethod/code/GenerateTreeNodeSet/input/tpch_22.json
 EmbeddingMethod/code/Preprocessing/input/merge.json
+.vscode/

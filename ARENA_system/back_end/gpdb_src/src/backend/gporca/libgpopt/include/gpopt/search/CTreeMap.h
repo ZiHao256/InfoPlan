@@ -18,7 +18,7 @@
 #define GPOPT_CTreeMap_H
 
 #define ARENA_GTFILTER
-// #define ARENA_COSTFT  /* if this macro is present, the GFP&Cost strategy is used, otherwise the GFP strategy is used. */
+// #define INFOPLAN_COSTFT  /* if this macro is present, the GFP&Cost strategy is used, otherwise the GFP strategy is used. */
 
 #include "gpos/base.h"
 #include "gpos/common/CHashMap.h"
@@ -255,14 +255,14 @@ private:
 							CCost & tempCost = costList->at(k).at(subGroupId);
 							tempArray.push_back(&tempCost);
 						}
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 						ARENA_id2Cost[idList[j]] = m_value->CostCompute(m_mp, tempArray);
 #endif
 					}
 				}
 				else
 				{
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 					for (std::size_t j = 0; j < idList.size(); j++)  
 					{
 						CCost tempCost;
@@ -318,7 +318,7 @@ private:
 							{
 								if(costList != nullptr)
 								{
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 									id2Cost[temp[i]+prefixNum] = ptn->ARENA_id2Cost[temp[i]];
 #endif
 								}
@@ -332,7 +332,7 @@ private:
 							{
 								if(costList != nullptr)
 								{
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 									id2Cost[pair.second[i]+prefixNum] = ptn->ARENA_id2Cost[pair.second[i]];
 #endif
 								}
@@ -425,7 +425,7 @@ private:
 		ULONG ARENA_groupId; 
 		std::vector<std::string> ARENA_groupTree; 
 		std::unordered_map<std::string, std::vector<int>> ARENA_groupTreePlus;
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 		std::unordered_map<int, CCost> ARENA_id2Cost; 
 #endif
 		/******************** ARENA END ***************************/
@@ -513,7 +513,7 @@ private:
 				std::vector<std::vector<std::string>> groupTreeRecord;  
 				std::vector<std::vector<std::vector<int>>>  groupTreeId;
 				std::vector<int> groupTreeNum;
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 				std::vector<std::unordered_map<int, CCost>> costList;
 #endif
 				#endif
@@ -524,7 +524,7 @@ private:
 					/******************** ARENA ********************/
 					#ifdef ARENA_GTFILTER
 					groupTreeNum.push_back((int)ull);
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 					ARENA_TreeCount(ulChild, groupTreeRecord, &groupTreeId, &costList);
 #else
 					ARENA_TreeCount(ulChild, groupTreeRecord, &groupTreeId, nullptr);
@@ -555,7 +555,7 @@ private:
 						std::string temp = "[[]]";
 						ARENA_groupTree.push_back(temp);
 						ARENA_groupTreePlus["[[]]"] = std::vector<int>{1};
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 						std::vector<CCost*> tempArray;
 						ARENA_id2Cost[1] = m_value->CostCompute(m_mp, tempArray);  
 #endif
@@ -606,7 +606,7 @@ private:
 						for(std::size_t i=0;i<ARENA_groupTree.size();i++)
 						{
 							std::vector<int> tempIdList;
-#ifdef ARENA_COSTFT
+#ifdef INFOPLAN_COSTFT
 							ARENA_getIdList(ARENA_recordId[i], groupTreeNum, tempIdList, &costList);
 #else
 							ARENA_getIdList(ARENA_recordId[i], groupTreeNum, tempIdList, nullptr);
