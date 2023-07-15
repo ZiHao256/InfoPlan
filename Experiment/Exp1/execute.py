@@ -62,15 +62,20 @@ def cf_tips_efficiency(file):
             fout.write(line)
 
 def main():
+    f_embedding_result_path = open("/tmp/embedding_result_path.txt", 'w')
+    f_embedding_result_path.write(os.path.abspath('.')+'/embedding/')
+    f_embedding_result_path.close()
     files = os.listdir('sql')
     for file in files:
         print('execute ', file)
         sql = get_sql(file)
         db_name, sql_id = get_info(file)
         try:
-            f_current_sql = open("/tmp/current_sql.txt", 'w');
+            f_current_sql = open("/tmp/current_sql.txt", 'w')
             f_current_sql.write(db_name+sql_id)
             f_current_sql.close()
+
+
             run_sql(db_name, sql)
         except NameError as ex:
             print(file, ' wrong', ex)
@@ -82,8 +87,8 @@ def main():
             # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'tips.txt', cf_tips_efficiency)
 
             # Embedding method
-            # move_result('effect/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_effect)
-            # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_efficiency)
+            move_result('effect/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_effect)
+            move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_efficiency)
 
             # TIPS-B algorithm
             # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'tips_b.txt', cf_tips_efficiency)

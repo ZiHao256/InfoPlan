@@ -5747,7 +5747,9 @@ void INFOPLAN_TIPS()
 			// get current_sql: name, dbname, sqlid
 			std::string current_sql_name;
 			getline(fin_current_sql, current_sql_name);
-			// file to output json of 18.txt
+			// file to output AQPs in json format 
+			std::string jsonsPath = "/tmp/jsons/";
+			mkdir(jsonsPath.c_str(), 0777);
 			std::ofstream fout_json("/tmp/jsons/"+ current_sql_name +".txt", std::ofstream::app);
 			/* ************************ */
 
@@ -6070,37 +6072,17 @@ void INFOPLAN_Exp1()
 	}
 }
 
-/************************************************************
- * get a file name to output the execution information
- ************************************************************/ 
-std::string getEmbeddingDirName()
-{
-	std::string res("/home/");
-
-	char * userName = nullptr;
-	userName = getlogin();  // get the user name
-	char * workDir = nullptr;
-	workDir = getwd();
-	char * currentWorkDir = nullptr;
-	currentWorkDir = getcwd();
-
-	if(userName != nullptr)
-	{
-		res += userName;
-		res += "/InfoPlan/Experiment/Exp1/embedding/";
-	}
-	else
-	{
-		res = "/InfoPlan/Experiment/Exp1/embedding/";
-	}
-
-	return res;
-}
 
 // test the effectiveness and efficiency of embedding
 void INFOPLAN_Exp1Embedding(){
 	// record the selected AQPs ids from embedding
 	std::vector<int> selected_embedding_AQPs;
+
+	// file storaging the embedding result
+	std::ifstream fin_embedding_result_path("/tmp/embedding_result_path.txt");
+	std::string embedding_result_path;
+	getline(fin_embedding_result_path, embedding_result_path);
+	fin_embedding_result_path.close();
 
 	// file storaging the current sql name
 	std::ifstream fin_current_sql("/tmp/current_sql.txt");
@@ -6108,17 +6090,20 @@ void INFOPLAN_Exp1Embedding(){
 	// get current_sql: name, dbname, sqlid
 	std::string current_sql_name;
 	getline(fin_current_sql, current_sql_name);
+	fin_current_sql.close();
 
 	// output test info
-	std::ofstream fout_test("/tmp/tests/test"+ current_sql_name +".txt");
+	std::string testsPath = "/tmp/tests/";
+	mkdir(testsPath.c_str(), 0777);
+	std::ofstream fout_test("/tmp/tests/test"+ current_sql_name +".txt", std::ofstream::out);
 
 	std::string current_sql_dbname = current_sql_name.substr(0, 4);
 	std::string current_sql_sqlid = current_sql_name.substr(4,current_sql_name.length());
 
 	// open the file storaging info about embedding
-	std::ifstream fin_embedding_aqps(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
-	std::ifstream fin_embedding_time1(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
-	std::ifstream fin_embedding_time2(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
+	std::ifstream fin_embedding_aqps(embedding_result_path+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
+	std::ifstream fin_embedding_time1(embedding_result_path+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
+	std::ifstream fin_embedding_time2(embedding_result_path+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
 
 	// output the test info
 	if(fout_test.is_open()){
@@ -6147,6 +6132,8 @@ void INFOPLAN_Exp1Embedding(){
 	
 	fout_test.close();
 	fin_embedding_aqps.close();
+	fin_embedding_time1.close();
+	fin_embedding_time2.close();
 
 	// calculate interestingness for different k
 
