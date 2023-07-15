@@ -465,7 +465,7 @@ void FindKCost();  // Cost
 
 // The following functions are used for the experiments in Section 7.2
 void ARENAExp1();  // Exp1 in Section 7.2, TIPS algorithm
-void ARENAExp1Embedding();	// zihao: Exp1 in Section 7.2, Embedding
+void ARENAExp1Embedding();	// Exp1 in Section 7.2, Embedding
 void ARENAExp1Random();  // Exp1 in Section 7.2, Random
 void ARENAExp1Cost();  // Exp1 in Section 7.2, Cost
 
@@ -4985,8 +4985,8 @@ CEngine::SamplePlans()
 		fout_time << "experiment\n";
 		// adjust the function that will be executed based on the current experiment
 
-		/* zihao:to get json*/
-		ARENA_TIPS();
+		/* to get json*/
+		// ARENA_TIPS();
 
 		/* Exp1 */
 		// ARENAExp1();
@@ -6073,7 +6073,7 @@ void ARENAExp1()
 	}
 }
 
-// zihao: test the effectiveness and efficiency of embedding
+// test the effectiveness and efficiency of embedding
 void ARENAExp1Embedding(){
 	// record the selected AQPs ids from embedding
 	std::vector<int> selected_embedding_AQPs;
@@ -6092,9 +6092,9 @@ void ARENAExp1Embedding(){
 	std::string current_sql_sqlid = current_sql_name.substr(4,current_sql_name.length());
 
 	// open the file storaging info about embedding
-	std::ifstream fin_embedding_aqps("/home/zihao/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
-	std::ifstream fin_embedding_time1("/home/zihao/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
-	std::ifstream fin_embedding_time2("/home/zihao/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
+	std::ifstream fin_embedding_aqps("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
+	std::ifstream fin_embedding_time1("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
+	std::ifstream fin_embedding_time2("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
 
 	// output the test info
 	if(fout_test.is_open()){

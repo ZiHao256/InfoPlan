@@ -65,7 +65,7 @@ endif
 endif
 else # not PGXS
 vpath_build = no
-abs_top_srcdir = /home/zihao/arena/ARENA_system/back_end/gpdb_src
+abs_top_srcdir = /home/arena1/anonymity/ARENA_system/back_end/gpdb_src
 
 ifneq ($(vpath_build),yes)
 top_srcdir = $(top_builddir)
@@ -361,7 +361,7 @@ apu_link_ld_libs	=
 
 # Miscellaneous
 
-AWK	= mawk
+AWK	= gawk
 LN_S	= ln -s
 MSGFMT  = 
 MSGFMT_FLAGS = 
@@ -375,8 +375,8 @@ BZIP2	= bzip2
 
 # Testing
 
-abs_top_builddir = /home/zihao/arena/ARENA_system/back_end/gpdb_src
-abs_top_srcdir = /home/zihao/arena/ARENA_system/back_end/gpdb_src
+abs_top_builddir = /home/arena1/anonymity/ARENA_system/back_end/gpdb_src
+abs_top_srcdir = /home/arena1/anonymity/ARENA_system/back_end/gpdb_src
 
 check:
 
