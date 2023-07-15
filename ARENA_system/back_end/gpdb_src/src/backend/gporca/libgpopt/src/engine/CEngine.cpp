@@ -463,7 +463,7 @@ void INFOPLAN_TIPS();  // TIPS algorithm
 void FindKRandom();  // Random
 void FindKCost();  // Cost
 
-// The following functions are used for the experiments in Section 7.2
+// The following functions are used for the experiments in Section 6.2
 void INFOPLAN_Exp1();  // Exp1 in Section 6.2, TIPS algorithm
 void INFOPLAN_Exp1Embedding();	// Exp1 in Section 6.2, Embedding
 void INFOPLAN_Exp1Random();  // Exp1 in Section 6.2, Random
