@@ -7,8 +7,8 @@ if __name__ == '__main__':
     print("input the name of txt(with out .txt)")
     input_file_name = input()
 
-    input_path = os.path.abspath(os.path.dirname(os.getcwd())) + '/process_AQP_list/input/'+input_file_name+'.txt'
-    # print(input_path)
+    input_path = os.path.abspath('.') + '/input/'+input_file_name+'.txt'
+
 
     txt_content_str = "["
 
@@ -21,6 +21,6 @@ if __name__ == '__main__':
 
     # 解析JSON文件的str格式为dict和list
 
-    output_path = os.path.abspath(os.path.dirname(os.getcwd())) + '/process_AQP_list/output/'+input_file_name+'.json'
+    output_path = os.path.abspath('.') + '/output/'+input_file_name+'.json'
     w_file_AQP_json = open(output_path, 'w')
     w_file_AQP_json.write(txt_content_str)
