@@ -1,9 +1,11 @@
 import argparse
 import os
+import sys
 import numpy as np
 import networkx as nx
 from Preprocessing.word2vec import node2vec
 from gensim.models import Word2Vec
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from GenerateTreeNodeSet.get_DFS_node_list import AQPs2Tree
 from GenerateTreeNodeSet.get_DFS_node_list import DFS
 
@@ -29,7 +31,7 @@ def parse_args():
     # 输入数据集（节点树）的路径
     parser.add_argument('--input', nargs='?', default=input_file_name+'.json')
     # 输出训练数据的路径（node_index-vecotr字典）
-    parser.add_argument('--output', nargs='?', default=os.path.abspath(os.path.dirname(os.getcwd()))+'/Preprocessing/output/nodeindex-weightmetric.emb')
+    parser.add_argument('--output', nargs='?', default=os.path.abspath('.')+'/output/nodeindex-weightmetric.emb')
     # node vector的维度
     parser.add_argument('--dimensions', type=int, default=128)
     parser.add_argument('--walk-length', type=int, default=80)

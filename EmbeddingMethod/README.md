@@ -22,9 +22,9 @@ This directory contains the source of Embedding Method which converts AQPs into 
     - **output/** contains the time of get AQP Vectors and the top 50 farthest AQP ids from QEP.
 
 # Install Requirements
-python 3.9.6
+install python 3.9.6
 
-redis 7.0.0
+install redis 7.0.0
 - `pip3 install -r requirements.txt`
 
 # Run
