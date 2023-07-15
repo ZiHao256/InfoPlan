@@ -1,0 +1,3 @@
+the plan number is: 24
+B-TIPS
+total time(ms): 2
