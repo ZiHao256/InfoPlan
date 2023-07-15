@@ -1,0 +1,4 @@
+- `word2vec`目录：
+  - 完成Preprocessing步骤，
+    - 从`../input/AQPs.json`读入训练数据
+    - 使用skip_gram算法训练模型，得到node-vector训练数据，将其存储到`../output/nodeindex-weightmetric.emb`

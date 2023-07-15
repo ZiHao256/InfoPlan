@@ -1,0 +1,2477 @@
+[
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00925524999997,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00052205000003,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.01821895,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.6723460166947,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00925524999997,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00052205000003,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.01821895,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.6723460166947,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00052205000003,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00925524999997,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.03507848,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.689205546695,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00615274999996,
+                                "info": "",
+                                "name": "MotionHashDistribute",
+                                "tag": ""
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.0149808499999,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.0200658499999,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.6741929166947,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00140645,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.01334035,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.01842535,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.6725524166948,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.04684224999994,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.07252988,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.07761488,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.731741946695,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00615274999996,
+                                "info": "",
+                                "name": "MotionHashDistribute",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.03184038,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.03692538,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.6910524466948,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 437.840989569855,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.04684224999994,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.07252988,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 862.07761488,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1303.731741946695,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "supplier",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.957,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 433.4818658101771,
+                                "info": "",
+                                "name": "Filter",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 437.840989569855,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00925524999997,
+                        "info": "",
+                        "name": "MotionGather",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 872.729946156883,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 431.00052205000003,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1307.5977506562679,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "supplier",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.957,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 433.4818658101771,
+                                        "info": "",
+                                        "name": "Filter",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 435.4942636520343,
+                                "info": "",
+                                "name": "MotionHashDistribute",
+                                "tag": ""
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 870.3774572390622,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 875.5461309001333,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 431.00052205000003,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1310.4139353995183,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "supplier",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.957,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 433.4818658101771,
+                                "info": "",
+                                "name": "Filter",
+                                "tag": ""
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.04684224999994,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 868.408409397205,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 873.5770830582761,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            },
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 431.00052205000003,
+                "info": "",
+                "name": "MotionGather",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1308.444887557661,
+        "info": "",
+        "name": "InnerHashJoin",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "supplier",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.957,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 433.4818658101771,
+                                "info": "",
+                                "name": "Filter",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 435.4942636520343,
+                        "info": "",
+                        "name": "MotionHashDistribute",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00140645,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.01334035,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1301.3207414988742,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1306.3648688066664,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00615274999996,
+                                        "info": "",
+                                        "name": "MotionHashDistribute",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.0149808499999,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.0532308499999,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.3482341570168,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.392361464809,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "region",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00034925,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00140645,
+                                        "info": "",
+                                        "name": "MotionBroadcast",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.01334035,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.05159035,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.346593657017,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.3907209648091,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00925524999997,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "region",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00034925,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00052205000003,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.01821895,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.05646895,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.351472257017,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.3955995648091,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.04684224999994,
+                                        "info": "",
+                                        "name": "MotionBroadcast",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.07252988,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.11077988,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.4057831870168,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.449910494809,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00615274999996,
+                                        "info": "",
+                                        "name": "MotionHashDistribute",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.03184038,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.0700903799999,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.3650936870167,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.409220994809,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "region",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00034925,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.04684224999994,
+                                        "info": "",
+                                        "name": "MotionBroadcast",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.07252988,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.11077988,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.4057831870168,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.449910494809,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "supplier",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.957,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 433.4818658101771,
+                        "info": "",
+                        "name": "Filter",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "region",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00034925,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00052205000003,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00925524999997,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 862.03507848,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 862.07332848,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1299.3683317870168,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1304.412459094809,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child_flag": false,
+                                                                "cost": 0.0,
+                                                                "info": "",
+                                                                "name": "supplier",
+                                                                "tag": "TABLE"
+                                                            }
+                                                        ],
+                                                        "child_flag": true,
+                                                        "cost": 431.957,
+                                                        "info": "",
+                                                        "name": "TableScan",
+                                                        "tag": "SCAN"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 433.4818658101771,
+                                                "info": "",
+                                                "name": "Filter",
+                                                "tag": ""
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 435.4942636520343,
+                                        "info": "",
+                                        "name": "MotionHashDistribute",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 870.3774572390622,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 872.7635853451319,
+                        "info": "",
+                        "name": "MotionHashDistribute",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1307.6312542445169,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1312.675381552309,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "supplier",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.957,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 433.4818658101771,
+                                        "info": "",
+                                        "name": "Filter",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.04684224999994,
+                                        "info": "",
+                                        "name": "MotionBroadcast",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 868.408409397205,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 870.7945375032747,
+                        "info": "",
+                        "name": "MotionHashDistribute",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1305.6622064026596,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1310.7063337104519,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child": [
+                                                            {
+                                                                "child_flag": false,
+                                                                "cost": 0.0,
+                                                                "info": "",
+                                                                "name": "supplier",
+                                                                "tag": "TABLE"
+                                                            }
+                                                        ],
+                                                        "child_flag": true,
+                                                        "cost": 431.957,
+                                                        "info": "",
+                                                        "name": "TableScan",
+                                                        "tag": "SCAN"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 433.4818658101771,
+                                                "info": "",
+                                                "name": "Filter",
+                                                "tag": ""
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 437.840989569855,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    },
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "nation",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.00191125,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00925524999997,
+                                        "info": "",
+                                        "name": "MotionGather",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 872.729946156883,
+                                "info": "",
+                                "name": "InnerHashJoin",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 875.1160742629527,
+                        "info": "",
+                        "name": "MotionHashDistribute",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child_flag": false,
+                                "cost": 0.0,
+                                "info": "",
+                                "name": "region",
+                                "tag": "TABLE"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00034925,
+                        "info": "",
+                        "name": "TableScan",
+                        "tag": "SCAN"
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1309.9837431623375,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1315.0278704701298,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child": [
+                                                    {
+                                                        "child_flag": false,
+                                                        "cost": 0.0,
+                                                        "info": "",
+                                                        "name": "supplier",
+                                                        "tag": "TABLE"
+                                                    }
+                                                ],
+                                                "child_flag": true,
+                                                "cost": 431.957,
+                                                "info": "",
+                                                "name": "TableScan",
+                                                "tag": "SCAN"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 433.4818658101771,
+                                        "info": "",
+                                        "name": "Filter",
+                                        "tag": ""
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 435.4942636520343,
+                                "info": "",
+                                "name": "MotionHashDistribute",
+                                "tag": ""
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "nation",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00191125,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 870.3774572390622,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00140645,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1305.246146138447,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1310.2902734462393,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    },
+    {
+        "child": [
+            {
+                "child": [
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "supplier",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.957,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 433.4818658101771,
+                                "info": "",
+                                "name": "Filter",
+                                "tag": ""
+                            },
+                            {
+                                "child": [
+                                    {
+                                        "child": [
+                                            {
+                                                "child_flag": false,
+                                                "cost": 0.0,
+                                                "info": "",
+                                                "name": "nation",
+                                                "tag": "TABLE"
+                                            }
+                                        ],
+                                        "child_flag": true,
+                                        "cost": 431.00191125,
+                                        "info": "",
+                                        "name": "TableScan",
+                                        "tag": "SCAN"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.04684224999994,
+                                "info": "",
+                                "name": "MotionBroadcast",
+                                "tag": ""
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 868.408409397205,
+                        "info": "",
+                        "name": "InnerHashJoin",
+                        "tag": ""
+                    },
+                    {
+                        "child": [
+                            {
+                                "child": [
+                                    {
+                                        "child_flag": false,
+                                        "cost": 0.0,
+                                        "info": "",
+                                        "name": "region",
+                                        "tag": "TABLE"
+                                    }
+                                ],
+                                "child_flag": true,
+                                "cost": 431.00034925,
+                                "info": "",
+                                "name": "TableScan",
+                                "tag": "SCAN"
+                            }
+                        ],
+                        "child_flag": true,
+                        "cost": 431.00140645,
+                        "info": "",
+                        "name": "MotionBroadcast",
+                        "tag": ""
+                    }
+                ],
+                "child_flag": true,
+                "cost": 1303.2770982965899,
+                "info": "",
+                "name": "InnerHashJoin",
+                "tag": ""
+            }
+        ],
+        "child_flag": true,
+        "cost": 1308.321225604382,
+        "info": "",
+        "name": "MotionGather",
+        "tag": ""
+    }
+]
