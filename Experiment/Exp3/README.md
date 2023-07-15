@@ -7,6 +7,6 @@ This directory contains experimental data and experimental scripts related to Ex
 - **sql** contains the sql statement used in this experiment.
 
 # Conduct Experiment
-This experiment involves only one function `ARENA_TIPS`. You just need to adjust the value of the global variable `gLambda` to get the results in different situations. A simpler method is to adjust the control parameter `lambda` of the front end, and you can also get the results with different weights of relevance and plan difference. 
+This experiment involves only one function `INFOPLAN_TIPS`. You just need to adjust the value of the global variable `gLambda` to get the results in different situations. A simpler method is to adjust the control parameter `lambda` of the front end, and you can also get the results with different weights of relevance and plan difference. 
 
 Note that `lambda` is the weight of plan differences. So if you want the result of **the_weight_of_relevance_is_0** you need to set `lambda` to 1.
