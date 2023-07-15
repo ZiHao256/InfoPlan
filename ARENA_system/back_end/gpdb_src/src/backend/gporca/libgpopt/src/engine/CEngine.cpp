@@ -4987,7 +4987,7 @@ CEngine::SamplePlans()
 
 		/* Exp1 */
 		// INFOPLAN_Exp1();
-		// INFOPLAN_Exp1Embedding();
+		INFOPLAN_Exp1Embedding();
 		// INFOPLAN_Exp1Random();
 		// INFOPLAN_Exp1Cost();
 
@@ -6070,6 +6070,33 @@ void INFOPLAN_Exp1()
 	}
 }
 
+/************************************************************
+ * get a file name to output the execution information
+ ************************************************************/ 
+std::string getEmbeddingDirName()
+{
+	std::string res("/home/");
+
+	char * userName = nullptr;
+	userName = getlogin();  // get the user name
+	char * workDir = nullptr;
+	workDir = getwd();
+	char * currentWorkDir = nullptr;
+	currentWorkDir = getcwd();
+
+	if(userName != nullptr)
+	{
+		res += userName;
+		res += "/InfoPlan/Experiment/Exp1/embedding/";
+	}
+	else
+	{
+		res = "/InfoPlan/Experiment/Exp1/embedding/";
+	}
+
+	return res;
+}
+
 // test the effectiveness and efficiency of embedding
 void INFOPLAN_Exp1Embedding(){
 	// record the selected AQPs ids from embedding
@@ -6089,9 +6116,9 @@ void INFOPLAN_Exp1Embedding(){
 	std::string current_sql_sqlid = current_sql_name.substr(4,current_sql_name.length());
 
 	// open the file storaging info about embedding
-	std::ifstream fin_embedding_aqps("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
-	std::ifstream fin_embedding_time1("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
-	std::ifstream fin_embedding_time2("/home/TODO/arena/Experiment/Exp1/embedding/"+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
+	std::ifstream fin_embedding_aqps(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/50_selected_aqps.txt");
+	std::ifstream fin_embedding_time1(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_nodeset_time.txt");
+	std::ifstream fin_embedding_time2(getEmbeddingDirName+current_sql_dbname+"/"+ current_sql_sqlid +"/generate_aqp_vector_time.txt");
 
 	// output the test info
 	if(fout_test.is_open()){
