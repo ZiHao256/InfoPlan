@@ -17,4 +17,4 @@ plan interestingness: 0.227
 
 *the number of informative plans is: 50
 plan interestingness: 0.219
-*total time(ms): 8014
+*total time(ms): 8015

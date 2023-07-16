@@ -83,12 +83,12 @@ def main():
         # you need to decide which code can be executed based on the currently executing algorithm
 
             # TIPS-H algorithm
-            # move_result('effect/'+str(db_name)+'/'+str(sql_id), 'tips.txt', cf_tips_effect)
-            # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'tips.txt', cf_tips_efficiency)
+            move_result('effect/'+str(db_name)+'/'+str(sql_id), 'tips.txt', cf_tips_effect)
+            move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'tips.txt', cf_tips_efficiency)
 
             # Embedding method
-            move_result('effect/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_effect)
-            move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_efficiency)
+            # move_result('effect/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_effect)
+            # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'embedding.txt', cf_tips_efficiency)
 
             # TIPS-B algorithm
             # move_result('efficiency/'+str(db_name)+'/'+str(sql_id), 'tips_b.txt', cf_tips_efficiency)

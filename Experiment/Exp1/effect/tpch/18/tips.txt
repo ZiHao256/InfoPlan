@@ -1,20 +1,20 @@
 
 *the number of informative plans is: 10
-*plan interestingness: 0.367
-total time(ms): 38
+*plan interestingness: 0.345
+total time(ms): 26
 
 *the number of informative plans is: 20
-*plan interestingness: 0.361
-total time(ms): 37
+*plan interestingness: 0.344
+total time(ms): 25
 
 *the number of informative plans is: 30
-*plan interestingness: 0.357
-total time(ms): 42
+*plan interestingness: 0.339
+total time(ms): 27
 
 *the number of informative plans is: 40
-*plan interestingness: 0.353
-total time(ms): 47
+*plan interestingness: 0.337
+total time(ms): 30
 
 *the number of informative plans is: 50
-*plan interestingness: 0.352
-total time(ms): 50
+*plan interestingness: 0.337
+total time(ms): 34

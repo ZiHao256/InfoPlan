@@ -4986,8 +4986,8 @@ CEngine::SamplePlans()
 		// adjust the function that will be executed based on the current experiment
 
 		/* Exp1 */
-		// INFOPLAN_Exp1();
-		INFOPLAN_Exp1Embedding();
+		INFOPLAN_Exp1();
+		// INFOPLAN_Exp1Embedding();
 		// INFOPLAN_Exp1Random();
 		// INFOPLAN_Exp1Cost();
 
